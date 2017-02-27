@@ -102,7 +102,8 @@ public class Utility {
             JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
 
             String weatherContent = jsonArray.getJSONObject(0).toString();
-            return new Gson().fromJson(weatherContent, Weather.class);
+            return new Gson().fromJson(weatherContent, Weather.class);  // 调用fromJson（）方法，将JSON数据转换成 Weather对象
+
         } catch (Exception e) {
             e.printStackTrace();
         }
